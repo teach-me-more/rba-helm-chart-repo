@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{.Release.Name}}-cmap
+  namespace: {{.Release.Name}}-{{.Values.app.env}}
+data:
+  {{- toYaml .Values.app.config.data | nindent 2}}

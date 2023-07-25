@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{.Release.Name}}-service
+  namespace: {{.Release.Name}}-{{.Values.app.env}}
+  labels:
+{{- include "app_labels" $ | nindent 4 }}
+spec:
+  selector:
+    app: helm-demo-project
+  type: NodePort
+  ports:
+    {{- toYaml .Values.app.service_ports | nindent 3}}

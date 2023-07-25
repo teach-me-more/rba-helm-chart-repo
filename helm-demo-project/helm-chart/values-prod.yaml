@@ -1,0 +1,14 @@
+app:
+  replicas: 4
+  env: prod
+  namespace: helm-demo-project-ns-prod
+  container:
+    image: helm-demo-project:latest
+  service_ports:
+    -  protocol: TCP
+       port: 80
+       targetPort: 80 
+  config:
+    name: config.yaml
+    data:
+      initial_environment_value: "PURE_PROD"

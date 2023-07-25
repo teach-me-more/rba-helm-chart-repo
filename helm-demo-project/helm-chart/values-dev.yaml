@@ -1,0 +1,14 @@
+app:
+  replicas: 1
+  env: dev
+  name: helm-demo-project
+  container:
+    image: helm-demo-project:latest
+  service_ports:
+    -  protocol: TCP
+       port: 80
+       targetPort: 80 
+  config:
+    name: config.yaml
+    data:
+      initial_environment_value: "PURE_DEV"

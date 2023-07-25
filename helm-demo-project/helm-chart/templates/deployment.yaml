@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Release.Name}}-deployment
+  namespace: {{.Release.Name}}-{{.Values.app.env}}
+  labels:
+{{- include "app_labels" $ | nindent 4 }}
+spec:
+  replicas: {{.Values.app.replicas}}
+  selector:
+    matchLabels:
+      app: helm-demo-project
+  template:
+    metadata:
+      labels:
+{{- include "app_labels" $ | nindent 8}}
+    spec:
+      containers:
+        - image: {{.Values.app.container.image}}
+          imagePullPolicy: Never
+          name: helm-demo-project
+          ports:
+            - containerPort: 80
+          env:
+          - name: ENVIRONMENT_NAME
+            valueFrom:
+              configMapKeyRef:
+                name: {{.Release.Name}}-cmap
+                key: initial_environment_value
