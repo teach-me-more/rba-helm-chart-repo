@@ -3,32 +3,12 @@ entries:
   base-helm-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-07-24T20:23:34.471899-05:00"
+    created: "2023-07-24T20:31:55.944527-05:00"
     description: A Helm chart for Kubernetes
-    digest: bf8a343c39c21ed9088d2ba0058e66fe7e894f2bccbe5c8cde57a1ee8cb51c4a
+    digest: 4b11b8010fbf6764a287b3a2f14e3a464c73eefd0760f01dee5b8ce4248824a8
     name: base-helm-chart
     type: application
     urls:
     - base-helm-chart-0.2.0.tgz
     version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-07-24T20:23:34.47317-05:00"
-    description: A Helm chart for Kubernetes
-    digest: fea27dd91a83a50d4c6d0e9e9637641bb074c3a63594be92086b1bf6282d144b
-    name: base-helm-chart
-    type: application
-    urls:
-    - helm-demo-project/base-helm-chart-0.2.0.tgz
-    version: 0.2.0
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-07-24T20:23:34.472559-05:00"
-    description: A Helm chart for Kubernetes
-    digest: b1e97040d4dc66aec7d7525c514fb9508bb5eec2791b03a02e2b44240cd1b3ef
-    name: base-helm-chart
-    type: application
-    urls:
-    - helm-demo-project/base-helm-chart-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-07-24T20:23:34.471246-05:00"
+generated: "2023-07-24T20:31:55.943755-05:00"
